@@ -3,8 +3,8 @@ import requests
 import data
 
 # Функция создания заказа:
-def post_new_orders(body):
-    return requests.post(configuration.URL_SERVICE + configuration.CREATE_ORDERS_PATH)
+def post_new_orders(orders_body):
+    return requests.post(configuration.URL_SERVICE + configuration.CREATE_ORDERS_PATH, json=orders_body)
 
 # print(post_new_orders(data.orders_body).json())
 
